@@ -1,0 +1,314 @@
+.conteiner {
+    width: 1300px;
+    height: 100vh;
+    margin-left: 0px;
+}
+
+
+.viewpage {
+    width: 700px;
+    height: 95vh;
+    margin-left: 270px;
+    background-color: #1DB9C3;
+    float: left;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 5px rgb(116, 116, 116);
+     margin-top: 15px;
+
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(to right top, rgba(0, 64, 116, 0.685), rgb(0, 102, 153))
+}
+
+.header {
+    background-color: #2bcbba;
+    text-align: center;
+    color: #ffffff;
+    margin-top: -20px;
+    border-radius: 5px;
+}
+
+.about {
+    text-align: center;
+    font-weight: 600;
+}
+
+/* ----------------------------------------Play button--------------------------------- */
+#ereaPlayMusic {
+    width: 500px;
+    margin-left: 126px;
+    margin-top: 10px;
+    height: 28px;
+    /* border: 1px black solid; */
+    margin-bottom: 0;
+}
+
+button {
+    width: 70px;
+    height: 27px;
+    margin-right: 20px;
+    background-color: #7027A0;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    /* font-weight: ; */
+    cursor: pointer;
+    /* font-size: 15px; */
+}
+
+button:hover {
+    background-color: #9543cc;
+}
+button:active {
+    background-color: #390c57;
+}
+.available-icon {
+    filter: grayscale(100%);
+}
+#ereaPlayMusic>:last-child{
+    font-weight: 700;
+    color: #00fff2;
+}
+#ereaPlayMusic>:first-child{
+    font-weight: 700;
+    color: #00fff2;
+}
+
+/* ----------------------------------area voume-------------------------- */
+#areavolume {
+    height: 40px;
+    width: 150px;
+}
+.rangetimesong {
+    /* border: 1px solid black; */
+    width: 380px;
+    margin-left: 200px;
+    margin-top: -25px;
+}
+#rangetimesong{
+    width: 300px;
+    height: 5px;
+}
+/* -----------------------------List song bottom----------------------------------- */
+
+#listsong {
+    border: black 3px solid;
+    height: 190px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    overflow: auto;
+    width: 660px;
+}
+
+#listsong::-webkit-scrollbar {
+    width: 0px;
+}
+
+.tblistsong {
+    margin-left: -8px;
+    margin-top: 10px;
+    border-spacing: 20px;
+}
+
+.tblistsong td {
+    height: 10px;
+    border-radius: 4px;
+}
+
+.tblistsong td:hover {
+    box-shadow: 0px 0px 6px 4px rgb(122, 75, 250);
+    cursor: pointer;
+}
+
+.logosong {
+    border: honeydew 1px solid;
+    height: 40px;
+    width: 40px;
+    margin-top: 3px;
+    border-radius: 5px;
+}
+
+.aboutsong {
+    height: 10px;
+    border: 2px solid gray;
+
+}
+
+.aboutsong :hover {
+    border: aquamarine;
+
+}
+
+.namesong {
+    float: right;
+    margin-left: 3px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.infosinger {
+    color: rgb(39, 39, 39);
+    font-size: 13px;
+}
+
+/* ---------------------------------------Animation logo  -------------------------------- */
+#songlogo {
+    margin-left: 265px;
+    border-radius: 50%;
+    /* animation: app-logo-spin infinite 20s linear */
+}
+
+@keyframes app-logo-spin {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+/* -------------------------------------Text Creepin---------------------------------- */
+.marquee {
+    width: 380px;
+    margin: 0 auto;
+    font-size: 17px;
+    font-weight: 550;
+    color: white;
+}
+
+#volume {
+    width: 100px;
+    height: 10px;
+    padding-bottom: 3px;
+}
+
+/* ------------------------------------Playlist right------------------------------------- */
+.playlist {
+    border: 3px solid rgb(146, 146, 146);
+    /* border: rgb(85, 85, 85) 3px solid; */
+    height: 500px;
+    width: 270px;
+    float: right;
+    margin-top: 40px;
+    margin-left: 20px;
+    border-radius: 6px;
+    text-align: center;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.playlist::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+.playlist h4 {
+    background-color: yellowgreen;
+    margin-top: 0;
+    color: white;
+    font-size: 20px;
+
+}
+
+.namesongplaylist {
+    width: 180px;
+    height: 20px;
+    background-color: rgb(238, 255, 0);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.tbplaylist {
+    margin-left: 5px;
+    border-spacing: 10px;
+}
+
+.playlist button {
+    height: 25px;
+    width: 20px;
+    font-weight: 700;
+    text-align: left;
+    font-size: 13px;
+    margin-left: -7px;
+    margin-right: 0px;
+    background-color: rgb(216, 231, 0);
+    border-style: none;
+    border-radius: 4px;
+}
+
+.playlist button:hover {
+    background-color: rgba(246, 255, 121, 0.952);
+    cursor: pointer;
+
+}
+
+.delesongfrompl {
+    background-color: rgb(206, 13, 29) !important;
+}
+
+.delesongfrompl:hover {
+    background-color: rgb(248, 66, 82) !important;
+}
+#quantitysong{
+    color: rgb(0, 102, 128);
+    font-size: 15px;
+    margin-left: 50px;
+}
+/* ---------------------------------------Icon style----------------------------------------------- */
+.style-icon {
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
+    padding-top: 5px;
+}
+.style-icon:active{
+    border: 1px solid black;
+}
+
+.d-none {
+    display: none;
+}
+/* --------------------------------------------------Custom theme --------------------------------------------------- */
+.customtheme{
+    border: 2px solid rgb(146, 146, 146);
+    height: 320px;
+    width: 220px;
+    float: left;
+    margin: 40px -260px 0px 20px;
+    border-radius: 5px
+    ;
+}
+h3{
+    margin-top: 0;
+    text-align: center;
+    color: #ffffff;
+    background-color:yellowgreen ;
+}
+.customtheme table {
+    margin-left: 5px;
+    padding: 0;
+    border-spacing: 13px;
+    
+
+}
+.customtheme img{
+    height: 35px;
+    border-radius: 5px;
+    width: 180px;
+    border: none;
+    box-shadow: 0px 0px 6px 1px rgb(44, 44, 44);
+    cursor: pointer;
+}
+
+
+
+.customtheme button{
+    width: 150px;
+    margin-left: 15px;
+    color: #F5F5F5;
+    box-shadow: 0px 0px 6px 1px rgb(44, 44, 44);
+}

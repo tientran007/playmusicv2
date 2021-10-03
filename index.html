@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="shortcut icon" type="image/png" href="./images/icon/record.png" />
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="customtheme" >
+            <h3>Color Theme</h3>
+           <table>
+            <tr><td><img onclick="yellowtheme.settheme()" src="images/icon/yeelow theme.PNG" alt=""></td></tr>
+            <tr><td><img onclick="violettheme.settheme()" src="images/icon/pinktheme.png" alt=""></td></tr>
+            <tr><td><img  onclick="multiltheme.settheme()" src="images/icon/graytheme.png" alt=""></td></tr>
+            <tr><td><img  onclick="tomatotheme.settheme()" src="images/icon/snowtheme.png" alt=""></td></tr>
+            <tr><td><button onclick="defaulttheme.settheme()">Reset To Default theme</button></td></tr>
+           </table>
+        </div>
+        <div class="viewpage">
+            <div class="header">
+                <h2>Player Music Website</h2>
+            </div>
+            <div class="about">
+                <p>Listen to relaxing music after stressful working times</p>
+            </div>
+            <div>
+                <img id="songlogo" src="images/dumuathoiroi.jpg" alt="bacphanmusic" width="170px" height="170px">
+            </div>
+            <div id="areavolume">
+                <img   src="images/icon/2561215_volume_icon.png" class="style-icon" onclick="showrangevolume()" alt="">
+                <input class="d-none" type="range" id="volume" min="0" max="100" value="50"onchange="changeVolume(song)" />
+               <div class="rangetimesong">
+                <input type="range" onchange="rewindsong()" id="rangetimesong" min="0" max="100" value="0" >
+                <span id="innertime">0: 0</span>
+            </div> 
+            </div>
+            <div class="marquee">
+                <marquee id="marquee" scrollamount="5"> Bài hát: Dù Mưa Thôi Rơi - Thùy Chi </marquee>
+            </div>
+            <div id="ereaPlayMusic">
+                <button class="available-icon" id="randombutton" onclick="clickrandom()">⇆</button>
+                <button onclick="previoussong()">◁</button>
+                <button id="btnplay" onclick="playmusic(song)">▶  </button>
+                <button  onclick="nextsong()">▷</button>
+                <button class="available-icon" id="loopbutton"onclick="clickloop()" >↻</button>
+            </div>
+            <div id="song">
+                <audio id="defaultsong" src="music/dumuathoiroi.mp3"></audio>
+            </div>
+            <div id="listsong">
+                <table class="tblistsong">
+                    <tr>
+                        <td class="aboutsong" onclick="phanduyenlolang()">
+                            <audio id="phanduyenlolang" src="./music/phanduyenlolang.mp3"></audio>
+                            <img class="logosong" src="images/phanduyenlolang.jpg" alt="cuoidi">
+                            <p class="namesong">Phận Duyên Lỡ Làng <br><span class="infosinger">Phát Huy T4,Truzg</span>
+                            </p>
+                        </td>
+                        <td class="aboutsong" onclick="muonroimasaocon()">
+                            <audio id="muonroimasaocon" src="./music/muonroimasaocon.mp3"></audio>
+                            <img class="logosong" id="muonroimasaocon" src="images/muonroimasaocon.jpg" alt="cuoidi">
+                            <p class="namesong">Muộn Rồi Mà Sao Còn<br><span class="infosinger">Sơn Tùng M-TP</span>
+                            </p>
+                        </td>
+                        <td class="aboutsong" onclick="cauhencauthe()">
+                            <audio id="cauhencauthe" src="./music/cauhencauthe.mp3"></audio>
+                            <img class="logosong" src="images/cauhencauthe.jpg" alt="cuoidi">
+                            <p class="namesong">Câu Hẹn Câu Thề <br><span class="infosinger">Đình Dũng,ACV</span> </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="aboutsong" onclick="tinhthuongphuthe()">
+                            <audio id="tinhthuongphuthe" src="./music/tinhthuongphuthe.mp3"></audio>
+                            <img class="logosong" src="images/tinhthuongphuthe.jpg" alt="cuoidi">
+                            <p class="namesong">Tình Thương Phu Thê <br><span class="infosinger">Chí Hướng</span> </p>
+                        </td>
+                        <td class="aboutsong" onclick="codondanhchoai()">
+                            <audio id="codondanhchoai" src="music/codondanhchoai.mp3"></audio>
+                            <img class="logosong" src="images/codondanhchoai.jpg" alt="cuoidi">
+                            <p class="namesong">Cô Đơn Dành Cho Ai &nbsp; <br><span class="infosinger">Lee
+                                    Ken,Nal</span> </p>
+                        </td>
+                        <td class="aboutsong" onclick="haytraochoanh()">
+                            <audio id="haytraochoanh" src="./music/haytraochoanh.mp3"></audio>
+                            <img class="logosong" src="images/haytraochoanh.jpg" alt="cuoidi">
+                            <p class="namesong">Hãy Trao Cho Anh <br><span class="infosinger">Sơn Tùng M-TP</span> </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="aboutsong" onclick="caucongkhuyet()">
+                            <audio id="caucongkhuyet" src="./music/cauvongkhuyet.mp3"></audio>
+                            <img class="logosong" src="images/cauvongkhuyet.jpg" alt="cuoidi">
+                            <p class="namesong">Cầu Vồng Khuyết &nbsp;&nbsp;&nbsp;&nbsp;<br><span
+                                    class="infosinger">Tuấn Hưng</span> </p>
+                        </td>
+                        <td class="aboutsong" onclick="saigondaulongqua()">
+                            <audio id="saigondaulongqua" src="./music/saigondaulongqua.mp3"></audio>
+                            <img class="logosong" src="images/saigondaulongqua.jpg" alt="cuoidi">
+                            <p class="namesong">Sài Gòn Đau Lòng Quá <br><span class="infosinger">Hứa Kim Tuyền</span>
+                            </p>
+                        </td>
+                        <td class="aboutsong" onclick="chungtacuasaunay()">
+                            <audio id="chungtacuasaunay" src="./music/chungtacuasaunay.mp3"></audio>
+                            <img class="logosong" src="images/chungtacuasaunay.jpg" alt="cuoidi">
+                            <p class="namesong">Chúng Ta Sau Này <br><span class="infosinger">T.R.I</span> </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="aboutsong" ">
+                            <audio id="" src=" music/nayemgioi.mp3"> </audio> <img class="logosong"
+                            src="images/nayemgioi.jpg" alt="cuoidi">
+                            <p class="namesong">Này Em Gì Ơi &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><span
+                                    class="infosinger">Nguyễn Khoa,Lăng LD</span> </p>
+                        </td>
+                        <td class="aboutsong" ">
+                            <audio id=" gangnam" src="music/dungloanhdoima.mp3"></audio>
+                            <img class="logosong" src="images/dungloanhdoima.jpg" alt="cuoidi">
+                            <p class="namesong">Đừng Lo Anh Đợi Mà <br> <span class="infosinger">Bình Minh Vũ</span>
+                            </p>
+                        </td>
+                        <td class="aboutsong" ">
+                            <audio id=" gangnam" src="music/diroimoithuong.mp3"></audio>
+                            <img class="logosong" src="images/diroimoithuong.jpg" alt="cuoidi">
+                            <p class="namesong">Đi Rồi Mới Thấy <br><span class="infosinger">Võ Kiều Vân</span> </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="aboutsong">
+                            <audio id="" src="music/cauvongkhuyet.mp3"></audio>
+                            <img class="logosong" src="images/cauvongkhuyet.jpg" alt="cuoidi">
+                            <p class="namesong">Cầu Vồng Khuyết &nbsp;&nbsp;&nbsp;&nbsp;<br><span
+                                    class="infosinger">Tuấn Hưng</span> </p>
+                        </td>
+                        <td class="aboutsong">
+                            <audio id="" src="music/saigondaulongqua.mp3"></audio>
+                            <img class="logosong" src="images/saigondaulongqua.jpg" alt="cuoidi">
+                            <p class="namesong">Sài Gòn Đau Lòng Quá <br><span class="infosinger">Hứa Kim Tuyền</span>
+                            </p>
+                        </td>
+                        <td class="aboutsong">
+                            <audio id="" src="music/chungtacuasaunay.mp3"></audio>
+                            <img class="logosong" src="images/chungtacuasaunay.jpg" alt="cuoidi">
+                            <p class="namesong">Chúng Ta Sau Này <br><span class="infosinger">T.R.I</span> </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+        <div class="playlist" id="listplaysong">
+        </div>
+    </div>
+</body>
+<script src="./JS/musicmethod.js"></script>
+<script src="./JS/musictoplaylist.js"></script>
+
+</html>
